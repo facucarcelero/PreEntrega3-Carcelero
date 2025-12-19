@@ -1,0 +1,101 @@
+// ===========================
+// Cards
+// ===========================
+
+// Clase base para cards usando @extend
+%card-base {
+  background-color: $color-blanco;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  @include card-hover-effect;
+}
+
+// Card estándar - mantener estilos originales + animaciones avanzadas
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  // Animación de entrada
+  @include slide-up(0.5s);
+  
+  .card-body {
+    padding: $spacing-lg; // Espaciado consistente
+  }
+  
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  // Transformación en imágenes de card
+  .card-img-top {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover .card-img-top {
+    transform: scale(1.08);
+  }
+}
+
+// Card de producto - mantener estilos originales + animaciones avanzadas
+.card-product {
+  border: 1px solid $color-gris-claro;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  // Animación de entrada usando mixin
+  @include fade-in(0.6s);
+  
+  // Delay escalonado usando operador @for
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+  }
+  
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+    @include respond-to(xs) {
+      height: 200px;
+    }
+  }
+  
+  // Transformación en hover de imagen
+  &:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  .price {
+    color: $brand;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    transition: color 0.2s ease;
+  }
+  
+  &:hover .price {
+    color: $brand-2;
+  }
+}
+
+// Clases adicionales no estaban en el original
+
+// Wrapper de imagen de card
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  
+  img {
+    @include transition(transform);
+  }
+  
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+

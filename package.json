@@ -1,0 +1,24 @@
+{
+  "name": "musa-store",
+  "version": "1.0.0",
+  "description": "Tienda de ropa básica - PreEntrega 3",
+  "scripts": {
+    "sass": "sass scss/main.scss css/styles.css --source-map",
+    "sass:watch": "sass --watch scss/main.scss css/styles.css --source-map",
+    "sass:compressed": "sass scss/main.scss css/styles.css --style compressed --source-map",
+    "dev": "npx http-server -p 8000 -o",
+    "start": "npx http-server -p 8000 -o"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "bootstrap",
+    "responsive"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
+

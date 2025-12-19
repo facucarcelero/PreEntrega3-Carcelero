@@ -1,0 +1,19 @@
+// ===========================
+// Badges
+// ===========================
+
+// Clase base para badges usando @extend
+%badge-base {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  border-radius: $border-radius-sm;
+  line-height: 1;
+}
+
+// Badge estándar - mantener estilos originales
+.badge {
+  @extend %badge-base;
+}
+

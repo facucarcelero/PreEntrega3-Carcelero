@@ -1,0 +1,56 @@
+// ===========================
+// Navbar
+// ===========================
+
+.navbar {
+  // Mantener estilos originales de Bootstrap + animaciones avanzadas
+  // Animación de entrada usando mixin
+  @include slide-up(0.5s);
+  
+  .navbar-brand {
+    color: $brand-2 !important;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-xl;
+    transition: transform 0.3s ease, color 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.1);
+      color: $brand !important;
+    }
+  }
+  
+  .navbar-nav {
+    .nav-link {
+      color: $ink;
+      font-weight: $font-weight-medium;
+      transition: color 0.3s ease, transform 0.2s ease;
+      position: relative;
+      
+      // Efecto de línea inferior animada
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: $brand-2;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      
+      &:hover,
+      &.active {
+        color: $brand-2;
+        transform: translateY(-2px);
+        
+        &::after {
+          width: 80%;
+        }
+      }
+    }
+  }
+  
+  // Navbar toggler mantiene estilos de Bootstrap por defecto
+}
+

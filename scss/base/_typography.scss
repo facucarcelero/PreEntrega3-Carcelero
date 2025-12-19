@@ -1,0 +1,83 @@
+// ===========================
+// Tipografía
+// ===========================
+
+// Variables de tamaño de fuente usando operadores
+$font-sizes: (
+  xs: $font-size-base * 0.75,    // 0.75rem
+  sm: $font-size-base * 0.875,   // 0.875rem
+  base: $font-size-base,          // 1rem
+  lg: $font-size-base * 1.125,   // 1.125rem
+  xl: $font-size-base * 1.25,    // 1.25rem
+  "2xl": $font-size-base * 1.5,   // 1.5rem
+  "3xl": $font-size-base * 2,     // 2rem
+  "4xl": $font-size-base * 2.5,   // 2.5rem
+);
+
+// Generar clases de tamaño usando @each
+@each $name, $size in $font-sizes {
+  .text-#{$name} {
+    font-size: $size;
+  }
+}
+
+// Títulos con tamaños responsivos
+h1 {
+  font-size: $font-size-base * 2.5;
+  font-weight: $font-weight-bold;
+  
+  @include respond-to(xs) {
+    font-size: $font-size-base * 2;
+  }
+}
+
+h2 {
+  font-size: $font-size-base * 2;
+  font-weight: $font-weight-semibold;
+  
+  @include respond-to(xs) {
+    font-size: $font-size-base * 1.75;
+  }
+}
+
+h3 {
+  font-size: $font-size-base * 1.75;
+  font-weight: $font-weight-semibold;
+  
+  @include respond-to(xs) {
+    font-size: $font-size-base * 1.5;
+  }
+}
+
+h4 {
+  font-size: $font-size-base * 1.5;
+  font-weight: $font-weight-semibold;
+}
+
+h5 {
+  font-size: $font-size-base * 1.25;
+  font-weight: $font-weight-medium;
+}
+
+h6 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+}
+
+// Clases de utilidad para peso de fuente
+.font-normal {
+  font-weight: $font-weight-normal;
+}
+
+.font-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+

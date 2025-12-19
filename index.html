@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Musa Store - Inicio</title>
+  <meta name="description" content="Musa Store - Tienda de ropa básica en San Juan, Argentina. Prendas simples, cómodas y versátiles para tu día a día. Calidad, estilo y comodidad en cada pieza.">
+  <meta name="keywords" content="ropa básica, moda, tienda de ropa, San Juan, Argentina, prendas básicas, ropa hombre, ropa mujer">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Musa Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/catalogo.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/galeria.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/servicios.html">Servicios</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main>
+    <!-- Hero Section con Bootstrap -->
+    <div class="bg-brand text-white py-5 mb-4" data-aos="fade-up">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="display-3 fw-bold mb-3">Musa Store</h1>
+            <p class="lead mb-4">Moda simple y cómoda para todos los días.</p>
+            <a href="./pages/catalogo.html" class="btn btn-light btn-lg me-2">Ver Catálogo</a>
+            <a href="./pages/contacto.html" class="btn btn-outline-light btn-lg">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-3">
+      <!-- Sección descriptiva con Bootstrap -->
+      <section class="my-5">
+        <div class="row">
+          <div class="col-12 col-lg-8 mx-auto text-center">
+            <h2 class="display-5 mb-4">Bienvenidos a nuestra tienda</h2>
+            <p class="lead">Encontrarás las mejores prendas básicas para tu guardarropa. Calidad, estilo y comodidad en cada pieza.</p>
+            <div class="alert alert-info mt-4" role="alert">
+              <strong>¡Nueva colección disponible!</strong> Descubre las últimas tendencias en ropa básica.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tres columnas con Bootstrap Grid -->
+      <section class="my-5" data-aos="fade-up">
+        <h2 class="text-center mb-5">Nuestras categorías</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/hero.png" class="card-img-top img-fluid" alt="Ropa de temporada" loading="lazy" width="400" height="300">
+                <span class="badge bg-success position-absolute top-0 start-0 m-2">Nuevo</span>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h2 class="h5 card-title">Temporada Nueva</h2>
+                <p class="card-text flex-grow-1">Descubre nuestra nueva colección de prendas básicas para esta temporada.</p>
+                <a href="./pages/catalogo.html" class="btn btn-brand mt-auto">Ver catálogo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img src="./assets/img/hombre.jpg" class="card-img-top img-fluid" alt="Ropa de hombre" loading="lazy" width="400" height="300">
+              <div class="card-body d-flex flex-column">
+                <h2 class="h5 card-title">Hombre <span class="badge bg-secondary">Popular</span></h2>
+                <p class="card-text flex-grow-1">Prendas urbanas y clásicas para todo tipo de estilo.</p>
+                <a href="./pages/catalogo.html" class="btn btn-outline-primary mt-auto">Ver productos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img src="./assets/img/mujer.jpg" class="card-img-top img-fluid" alt="Ropa de mujer" loading="lazy" width="400" height="300">
+              <div class="card-body d-flex flex-column">
+                <h2 class="h5 card-title">Mujer</h2>
+                <p class="card-text flex-grow-1">Ropa moderna y versátil, diseñada para destacar.</p>
+                <a href="./pages/catalogo.html" class="btn btn-outline-primary mt-auto">Ver productos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de productos destacados con GRID REAL (CSS Grid) -->
+      <section class="my-5" data-aos="fade-up">
+        <h2 class="text-center mb-4">Productos destacados</h2>
+
+        <div class="custom-grid">
+          <div class="grid-item">
+            <img src="./assets/img/Remera básica hombre.jpg" alt="Remera básica hombre" loading="lazy" width="200" height="200">
+            <h3>Remera básica hombre</h3>
+            <p>$12.000</p>
+          </div>
+
+          <div class="grid-item">
+            <img src="./assets/img/jean-clasico-mujer.webp" alt="Jean clásico mujer" loading="lazy" width="200" height="200">
+            <h3>Jean clásico mujer</h3>
+            <p>$18.500</p>
+          </div>
+
+          <div class="grid-item">
+            <img src="./assets/img/buzo-liviano-hym.webp" alt="Buzo liviano" loading="lazy" width="200" height="200">
+            <h3>Buzo liviano</h3>
+            <p>$22.000</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección adicional con Bootstrap -->
+      <section class="my-5">
+        <div class="row bg-light p-4 rounded">
+          <div class="col-12 col-md-6">
+            <h3 class="h4 mb-3">¿Por qué elegirnos?</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><span class="badge bg-primary me-2">✓</span> Calidad garantizada</li>
+              <li class="mb-2"><span class="badge bg-primary me-2">✓</span> Precios accesibles</li>
+              <li class="mb-2"><span class="badge bg-primary me-2">✓</span> Envíos rápidos</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6">
+            <h3 class="h4 mb-3">Horarios de atención</h3>
+            <p class="mb-0"><strong>Lunes a Sábado:</strong> 10:00 a 20:00 hs</p>
+            <p class="mb-0"><strong>Domingos:</strong> Cerrado</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-footer py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+          <h5 class="mb-3">Musa Store</h5>
+          <p class="text-muted mb-0">Tu tienda de ropa básica de confianza.</p>
+        </div>
+        <div class="col-12 col-md-4 mb-3 mb-md-0">
+          <h5 class="mb-3">Enlaces</h5>
+          <ul class="list-unstyled">
+            <li><a href="./pages/catalogo.html" class="text-white-50 text-decoration-none">Catálogo</a></li>
+            <li><a href="./pages/about.html" class="text-white-50 text-decoration-none">Sobre nosotros</a></li>
+            <li><a href="./pages/contacto.html" class="text-white-50 text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="mb-3">Contacto</h5>
+          <p class="text-muted mb-0">Rastreador Calivar Norte 491 Norte<br>San Juan, Argentina</p>
+        </div>
+      </div>
+      <hr class="my-4 bg-secondary">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mb-0 text-muted">&copy; 2025 Musa Store. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+

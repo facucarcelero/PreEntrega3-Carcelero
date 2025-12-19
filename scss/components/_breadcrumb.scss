@@ -1,0 +1,36 @@
+// ===========================
+// Breadcrumb
+// ===========================
+
+.breadcrumb {
+  background-color: $color-fondo;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-lg;
+  
+  .breadcrumb-item {
+    a {
+      color: $brand-2;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.2s ease;
+      
+      &:hover {
+        text-decoration: underline;
+        color: $brand;
+        transform: translateX(3px);
+      }
+    }
+    
+    &.active {
+      color: $muted;
+    }
+    
+    // Separador
+    + .breadcrumb-item::before {
+      content: "/";
+      color: $muted;
+      padding: 0 $spacing-sm;
+    }
+  }
+}
+

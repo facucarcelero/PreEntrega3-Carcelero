@@ -1,0 +1,52 @@
+// ===========================
+// Main SCSS File
+// ===========================
+// Este archivo importa todos los módulos SCSS
+// siguiendo la arquitectura 7-1 pattern
+
+// 1. Abstracts (Variables, Mixins, Functions)
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+// 2. Vendors (Bootstrap overrides, etc.)
+@import 'vendors/bootstrap-overrides';
+
+// 3. Base (Reset, Typography)
+@import 'base/reset';
+@import 'base/typography';
+
+// 4. Layout (Header, Footer, Grid, Main)
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/main';
+
+// 5. Components (Buttons, Cards, Navbar, etc.)
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/navbar';
+@import 'components/badges';
+@import 'components/alerts';
+@import 'components/breadcrumb';
+@import 'components/pagination';
+
+// 6. Pages (Estilos específicos por página)
+@import 'pages/index';
+@import 'pages/catalogo';
+@import 'pages/about';
+@import 'pages/contacto';
+
+// 7. Themes
+@import 'themes/theme';
+
+// ===========================
+// Estilos globales adicionales - mantener originales
+// ===========================
+
+// List group improvements (del CSS original)
+.list-group-item-action:hover {
+  background-color: $color-gris-medio;
+  cursor: pointer;
+}
+

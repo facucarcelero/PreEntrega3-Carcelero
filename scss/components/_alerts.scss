@@ -1,0 +1,28 @@
+// ===========================
+// Alerts
+// ===========================
+
+.alert {
+  border: none;
+  border-radius: $border-radius-md;
+  // Animación de entrada usando mixin
+  @include slide-up(0.4s);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  // Transformación en hover
+  &:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  // Botón de cierre con transición
+  .btn-close {
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    
+    &:hover {
+      opacity: 0.7;
+      transform: rotate(90deg);
+    }
+  }
+}
+

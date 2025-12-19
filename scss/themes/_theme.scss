@@ -1,0 +1,44 @@
+// ===========================
+// Theme
+// ===========================
+
+// Variables CSS para uso en JavaScript - mantener originales
+:root {
+  --brand: #{$brand};
+  --brand-2: #{$brand-2};
+  --ink: #{$ink};
+  --muted: #{$muted};
+}
+
+// Clases de colores personalizadas para reemplazar Bootstrap
+.bg-brand {
+  background-color: $brand !important;
+}
+
+.bg-brand-2 {
+  background-color: $brand-2 !important;
+}
+
+.text-brand {
+  color: $brand !important;
+}
+
+.text-ink {
+  color: $ink !important;
+}
+
+.text-muted {
+  color: $muted !important;
+}
+
+// Footer con mejor contraste
+.bg-footer {
+  background-color: $ink !important;
+  color: $color-blanco !important;
+}
+
+// Modo oscuro (preparado para futuro)
+@media (prefers-color-scheme: dark) {
+  // Se puede implementar en el futuro
+}
+

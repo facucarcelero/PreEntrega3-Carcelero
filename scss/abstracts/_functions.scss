@@ -1,0 +1,24 @@
+// ===========================
+// Funciones de cálculo
+// ===========================
+
+// Función para calcular porcentaje
+@function percentage($value, $total) {
+  @return ($value / $total) * 100%;
+}
+
+// Función para calcular rem
+@function rem($pixels, $base: 16) {
+  @return ($pixels / $base) * 1rem;
+}
+
+// Función para oscurecer color
+@function darken-color($color, $amount: 10%) {
+  @return mix(black, $color, $amount);
+}
+
+// Función para aclarar color
+@function lighten-color($color, $amount: 10%) {
+  @return mix(white, $color, $amount);
+}
+

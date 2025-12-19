@@ -1,0 +1,33 @@
+// ===========================
+// Página Contacto
+// ===========================
+
+// Estilos para el mapa
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  background-color: $color-gris-claro;
+  
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  
+  // Responsive para móviles
+  @include respond-to(xs) {
+    height: 250px;
+  }
+}
+
+// Mejoras visuales para la card del mapa
+.card {
+  .map-container {
+    margin: 0;
+  }
+}
+

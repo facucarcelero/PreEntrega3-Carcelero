@@ -1,0 +1,161 @@
+// ===========================
+// Mixins de responsive
+// ===========================
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs - 1px) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (min-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
+// ===========================
+// Mixin de flexbox centrado
+// ===========================
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ===========================
+// Mixin de transición
+// ===========================
+@mixin transition($properties...) {
+  $transitions: ();
+  @each $property in $properties {
+    $transitions: append($transitions, $property $transition-base, comma);
+  }
+  transition: $transitions;
+}
+
+// ===========================
+// Mixin de transformación hover
+// ===========================
+@mixin hover-lift($distance: -4px) {
+  transition: transform $transition-base, box-shadow $transition-base;
+  
+  &:hover {
+    transform: translateY($distance);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// ===========================
+// Mixin de animación fade-in
+// ===========================
+@mixin fade-in($duration: 0.5s) {
+  animation: fadeIn $duration ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ===========================
+// Mixin de animación slide-up
+// ===========================
+@mixin slide-up($duration: 0.4s) {
+  animation: slideUp $duration ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ===========================
+// Mixin de animación pulse
+// ===========================
+@mixin pulse {
+  animation: pulse-animation 2s ease-in-out infinite;
+}
+
+@keyframes pulse-animation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulse-animation-large {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+// ===========================
+// Mixin de botón con gradiente
+// ===========================
+@mixin button-gradient($color-start, $color-end) {
+  background: linear-gradient(135deg, $color-start 0%, $color-end 100%);
+  border: none;
+  color: $color-blanco;
+  transition: all $transition-base;
+  
+  &:hover {
+    background: linear-gradient(135deg, darken($color-start, 5%) 0%, darken($color-end, 5%) 100%);
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+// ===========================
+// Mixin de card con efecto hover
+// ===========================
+@mixin card-hover-effect {
+  transition: transform $transition-fast, box-shadow $transition-fast;
+  background-color: $color-blanco;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// ===========================
+// Mixin de grid responsivo
+// ===========================
+@mixin grid-responsive($min-width: 220px, $gap: 1.5rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+  gap: $gap;
+  
+  @include respond-to(xs) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+

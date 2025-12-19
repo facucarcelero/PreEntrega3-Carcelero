@@ -1,0 +1,80 @@
+// ===========================
+// Botones
+// ===========================
+
+// Clase base para botones usando @extend
+%btn-base {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  cursor: pointer;
+  @include transition(all);
+  transform: translateY(0);
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Botones - mantener estilos originales + efectos avanzados
+.btn {
+  @extend %btn-base;
+  
+  // Transformación adicional en hover
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  // Efecto de pulso en botones activos
+  &.active {
+    @include pulse;
+  }
+}
+
+// Tamaños de botones usando operadores
+$btn-sizes: (
+  sm: 0.75,
+  md: 1,
+  lg: 1.25
+);
+
+@each $name, $multiplier in $btn-sizes {
+  .btn-#{$name} {
+    padding: $spacing-sm * $multiplier $spacing-lg * $multiplier;
+    font-size: $font-size-base * $multiplier;
+  }
+}
+
+// Botones adicionales no estaban en el original, mantener simple
+
+// Botones con colores personalizados
+.btn-brand {
+  @extend %btn-base;
+  background-color: $brand;
+  color: $color-blanco;
+  border-color: $brand;
+  
+  &:hover {
+    background-color: darken($brand, 10%);
+    border-color: darken($brand, 10%);
+  }
+}
+
+.btn-outline-brand {
+  @extend %btn-base;
+  background-color: transparent;
+  color: $brand;
+  border-color: $brand;
+  
+  &:hover {
+    background-color: $brand;
+    color: $color-blanco;
+  }
+}
+

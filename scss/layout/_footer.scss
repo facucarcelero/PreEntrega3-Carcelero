@@ -1,0 +1,19 @@
+// ===========================
+// Footer
+// ===========================
+
+footer {
+  margin-top: auto;
+  // Animación de entrada usando mixin
+  @include fade-in(0.8s);
+  
+  // Transiciones en enlaces
+  a {
+    transition: color 0.3s ease, transform 0.2s ease;
+    
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+}
+

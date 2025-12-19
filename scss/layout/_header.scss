@@ -1,0 +1,17 @@
+// ===========================
+// Header
+// ===========================
+
+header {
+  position: relative;
+  z-index: $z-index-fixed;
+  
+  // Animación de entrada usando mixin
+  @include slide-up(0.6s);
+  
+  // Efecto sticky con transformación
+  .navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+

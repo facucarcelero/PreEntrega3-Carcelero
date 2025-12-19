@@ -1,0 +1,90 @@
+// ===========================
+// Grid System (CSS Grid)
+// ===========================
+
+// Grid personalizado - mantener estilos originales del CSS que ya estaba
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: $spacing-lg;
+  
+  @include respond-to(xs) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+  
+  .grid-item {
+    border: 1px solid $color-gris-claro;
+    border-radius: $border-radius-xl;
+    overflow: hidden;
+    background-color: $color-blanco;
+    text-align: center;
+    padding-bottom: $spacing-md;
+    // Animación de entrada usando mixin
+    @include fade-in(0.5s);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    // Delay escalonado usando operador @for
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+      }
+    }
+    
+    &:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    img {
+      width: 100%;
+      height: 200px; // Altura fija proporcional
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    &:hover img {
+      transform: scale(1.05); // Reducido para evitar superposición
+    }
+    
+    h3 {
+      font-size: $font-size-lg;
+      margin-top: $spacing-md;
+      margin-bottom: $spacing-sm;
+      transition: color 0.2s ease;
+    }
+    
+    &:hover h3 {
+      color: $brand-2;
+    }
+    
+    p {
+      font-size: $font-size-base;
+      color: $muted;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    
+    &:hover p {
+      color: $brand;
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Grid de productos con diferentes tamaños
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: $spacing-lg;
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: $spacing-md;
+  }
+  
+  @include respond-to(xs) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+
