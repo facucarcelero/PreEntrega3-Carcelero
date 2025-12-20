@@ -1,6 +1,6 @@
 # Proyecto-Final-Carcelero
 
-Proyecto completo para la Pre-Entrega 3 de CoderHouse - Desarrollo Web.
+Proyecto completo para el Proyecto Final de CoderHouse - Desarrollo Web.
 
 ## Nombre del Proyecto
 
